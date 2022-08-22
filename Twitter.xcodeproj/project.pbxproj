@@ -26,7 +26,9 @@
 		581C0F2928B281A600F91321 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 581C0F2828B281A600F91321 /* FirebaseStorage */; };
 		581C0F2B28B285A200F91321 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C0F2A28B285A200F91321 /* AuthViewModel.swift */; };
 		581C0F2D28B3670800F91321 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C0F2C28B3670800F91321 /* ProfilePhotoSelectorView.swift */; };
-		58DE9A9528B0DD4E00CAB78E /* TwitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE9A9428B0DD4E00CAB78E /* TwitterApp.swift */; };
+		581C0F3028B36CA700F91321 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C0F2F28B36CA700F91321 /* ImagePicker.swift */; };
+		581C0F3228B3AF2200F91321 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C0F3128B3AF2200F91321 /* ImageUploader.swift */; };
+		581C0F3428B3B3D700F91321 /* TwitterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581C0F3328B3B3D700F91321 /* TwitterApp.swift */; };
 		58DE9A9728B0DD4E00CAB78E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE9A9628B0DD4E00CAB78E /* ContentView.swift */; };
 		58DE9A9928B0DD4F00CAB78E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DE9A9828B0DD4F00CAB78E /* Assets.xcassets */; };
 		58DE9A9C28B0DD4F00CAB78E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DE9A9B28B0DD4F00CAB78E /* Preview Assets.xcassets */; };
@@ -56,8 +58,10 @@
 		581C0F1F28B280A700F91321 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		581C0F2A28B285A200F91321 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		581C0F2C28B3670800F91321 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		581C0F2F28B36CA700F91321 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		581C0F3128B3AF2200F91321 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		581C0F3328B3B3D700F91321 /* TwitterApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterApp.swift; sourceTree = "<group>"; };
 		58DE9A9128B0DD4E00CAB78E /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		58DE9A9428B0DD4E00CAB78E /* TwitterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterApp.swift; sourceTree = "<group>"; };
 		58DE9A9628B0DD4E00CAB78E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58DE9A9828B0DD4F00CAB78E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DE9A9B28B0DD4F00CAB78E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -195,6 +199,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		581C0F2E28B36C9100F91321 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				581C0F2F28B36CA700F91321 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		58DE9A8828B0DD4E00CAB78E = {
 			isa = PBXGroup;
 			children = (
@@ -214,11 +226,12 @@
 		58DE9A9328B0DD4E00CAB78E /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				581C0F2E28B36C9100F91321 /* Utils */,
 				58DE9AA228B0DD6F00CAB78E /* Extensions */,
 				58DE9AA328B0DD6F00CAB78E /* Model */,
 				58DE9AA428B0DD6F00CAB78E /* Service */,
 				58DE9AA528B0DD6F00CAB78E /* Core */,
-				58DE9A9428B0DD4E00CAB78E /* TwitterApp.swift */,
+				581C0F3328B3B3D700F91321 /* TwitterApp.swift */,
 				58DE9A9628B0DD4E00CAB78E /* ContentView.swift */,
 				58DE9A9828B0DD4F00CAB78E /* Assets.xcassets */,
 				581C0F1F28B280A700F91321 /* GoogleService-Info.plist */,
@@ -252,6 +265,7 @@
 		58DE9AA428B0DD6F00CAB78E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				581C0F3128B3AF2200F91321 /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -458,8 +472,10 @@
 			files = (
 				58DE9ABB28B0FC1E00CAB78E /* MessagesView.swift in Sources */,
 				58DE9ABF28B0FCB900CAB78E /* ProfileView.swift in Sources */,
+				581C0F3028B36CA700F91321 /* ImagePicker.swift in Sources */,
 				58DE9A9728B0DD4E00CAB78E /* ContentView.swift in Sources */,
 				581C0F1E28B25C3500F91321 /* AuthHeaderView.swift in Sources */,
+				581C0F3228B3AF2200F91321 /* ImageUploader.swift in Sources */,
 				58DE9AAE28B0DE4C00CAB78E /* TweetRowView.swift in Sources */,
 				581C0F1928B25AD200F91321 /* CustomInputField.swift in Sources */,
 				58DE9AC128B1007800CAB78E /* TweetFilterViewModel.swift in Sources */,
@@ -467,7 +483,6 @@
 				581C0F2D28B3670800F91321 /* ProfilePhotoSelectorView.swift in Sources */,
 				581C0EFF28B21CC700F91321 /* SideMenuView.swift in Sources */,
 				581C0F0528B21E2900F91321 /* UserStatsView.swift in Sources */,
-				58DE9A9528B0DD4E00CAB78E /* TwitterApp.swift in Sources */,
 				58DE9AB728B0FBEF00CAB78E /* ExploreView.swift in Sources */,
 				581C0F0E28B2527200F91321 /* TextArea.swift in Sources */,
 				581C0F0728B226A200F91321 /* SideMenuOptionRowView.swift in Sources */,
@@ -480,6 +495,7 @@
 				581C0EF928B199F800F91321 /* UserRowView.swift in Sources */,
 				58DE9AB128B0E24F00CAB78E /* MainTabView.swift in Sources */,
 				58DE9AB928B0FC0C00CAB78E /* NotificationsView.swift in Sources */,
+				581C0F3428B3B3D700F91321 /* TwitterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
