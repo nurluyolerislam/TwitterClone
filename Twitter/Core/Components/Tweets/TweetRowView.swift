@@ -6,36 +6,43 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TweetRowView: View {
+    let tweet: Tweet
     var body: some View {
         VStack(alignment: .leading){
-            HStack(alignment: .top, spacing: 20){
-                Circle()
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(Color(.systemBlue))
-                
-                //MARK: User Info & Tweet Caption
-                VStack(alignment: .leading, spacing: 4){
-                    HStack{
-                        Text("Bruce Wayne")
-                            .font(.subheadline).bold()
-                        
-                        Group {
-                            Text("@batman")
-                            Text("2w")
-                        }
-                        .foregroundColor(.gray)
-                        .font(.caption)
-                    }
+            if let user = self.tweet.user{
+                HStack(alignment: .top, spacing: 20){
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 56, height: 56)
+                        .clipShape(Circle())
                     
-                    // MARK: Tweet Caption
-                    Text("I believe in Harvey Dent")
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
+                    //MARK: User Info & Tweet Caption
+                    VStack(alignment: .leading, spacing: 4){
+                        HStack{
+                            Text(user.fullname)
+                                .font(.subheadline).bold()
+                            
+                            Text("@\(user.username)")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                            
+                            Text("2w")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                        }
+                        
+                        // MARK: Tweet Caption
+                        Text(self.tweet.caption)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.leading)
+                    }
                 }
+                .padding()
             }
-            .padding()
             
             //MARK: Action Buttons
             HStack{
@@ -81,8 +88,8 @@ struct TweetRowView: View {
     }
 }
 
-struct TweetRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetRowView()
-    }
-}
+//struct TweetRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TweetRowView()
+//    }
+//}

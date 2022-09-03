@@ -12,9 +12,12 @@ struct ExploreView: View {
     
     var body: some View {
         VStack{
+            SearchBar(text: self.$viewModel.searchText)
+                .padding()
+            
             ScrollView{
                 LazyVStack{
-                    ForEach(self.viewModel.users){ user in
+                    ForEach(self.viewModel.searchableUsers){ user in
                         NavigationLink {
                             ProfileView(user: user)
                         } label: {
