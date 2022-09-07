@@ -49,6 +49,7 @@
 		58DE9ABB28B0FC1E00CAB78E /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE9ABA28B0FC1E00CAB78E /* MessagesView.swift */; };
 		58DE9ABF28B0FCB900CAB78E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE9ABE28B0FCB900CAB78E /* ProfileView.swift */; };
 		58DE9AC128B1007800CAB78E /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DE9AC028B1007800CAB78E /* TweetFilterViewModel.swift */; };
+		58FB8A9128C8BC57007B1AD7 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB8A9028C8BC57007B1AD7 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		58DE9ABA28B0FC1E00CAB78E /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		58DE9ABE28B0FCB900CAB78E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		58DE9AC028B1007800CAB78E /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
+		58FB8A9028C8BC57007B1AD7 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				58DE9AC028B1007800CAB78E /* TweetFilterViewModel.swift */,
+				58FB8A9028C8BC57007B1AD7 /* ProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				58DE9AB128B0E24F00CAB78E /* MainTabView.swift in Sources */,
 				58DE9AB928B0FC0C00CAB78E /* NotificationsView.swift in Sources */,
 				581C0F3428B3B3D700F91321 /* TwitterApp.swift in Sources */,
+				58FB8A9128C8BC57007B1AD7 /* ProfileViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
